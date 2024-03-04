@@ -129,7 +129,7 @@ resource "aws_instance" "Prod-Server" {
  ami = "ami-03bb6d83c60fc5f7c"
  instance_type = "t2.micro"
  availability_zone = "ap-south-1b"
- key_name = "anil"
+ key_name = "alok"
  network_interface {
  device_index = 0
  network_interface_id = aws_network_interface.proj-ni.id
@@ -139,7 +139,7 @@ resource "aws_instance" "Prod-Server" {
      sudo apt-get update -y
      sudo apt install docker.io -y
      sudo systemctl enable docker
-     sudo docker run -itd -p 8085:8081 eranil2u/insurance:1.0
+     sudo docker run -itd -p 8085:8081 aloktechguru/insurance:1.0
      sudo docker start $(docker ps -aq)
  EOF
  tags = {
